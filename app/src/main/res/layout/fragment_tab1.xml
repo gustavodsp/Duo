@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Tab1Fragment">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/videoView" />
+
+    <LinearLayout
+        android:id="@+id/contagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/dias"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/textview_count"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/horas"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/textview_count"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/minutos"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/textview_count"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/segundos"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/textview_count"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dias"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Horas"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Minutos"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Segundos"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.example.project_duo.Others.TextViewAvenir
+            android:id="@+id/txv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <com.example.project_duo.Others.TextViewAvenir
+            android:id="@+id/txv_couplenames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        fab:fab_addButtonColorNormal="@color/gold"
+        fab:fab_addButtonColorPressed="@color/gold"
+        fab:fab_addButtonPlusIconColor="@android:color/white"
+        fab:fab_labelStyle="@style/menu_labels_style">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/casal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/gold"
+            fab:fab_colorPressed="@color/gold"
+            fab:fab_icon="@drawable/couple"
+            fab:fab_size="mini"
+            fab:fab_title="Couple" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/gold"
+            fab:fab_colorPressed="@color/gold"
+            fab:fab_icon="@drawable/album"
+            fab:fab_size="mini"
+            fab:fab_title="Álbum" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/som"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/gold"
+            fab:fab_colorPressed="@color/gold"
+            fab:fab_size="mini"
+            fab:fab_title="Sound" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

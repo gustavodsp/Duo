@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Project_Duo</string>
+
+    <string-array name="perguntas">
+        <item>O que é?</item>
+        <item>Como obter uma versão Duo?</item>
+        <item>Quais são as features?</item>
+        <item>Por que criar uma conta?</item>
+        <item>Convidados precisam pagar?</item>
+    </string-array>
+
+    <string-array name="respostas">
+        <item>Duo é uma plataforma voltada para casamentos. Nosso objetivo é hospedar diversos eventos pela Irlanda e pelo mundo. Cada casamento possui uma versão Duo diferente, acessível através de um nome ou número que lhe é atribuido pelos próprios noivos</item>
+        <item>Basta fazer o login e clicar em "Criar evento" para adquirir uma versão Duo dedicada ao seu casamento. Simplificamos ao máximo o processo de aquisição para que em poucos minutos vocês possam ter uma versão própria.</item>
+        <item>Estamos sempre buscando inovar e acrescentar novas features na nossa plataforma, mas desde já, o app oferece diversas funcionalidades, como os feeds de fotos e mensagens, presentes de lua de mel, trailer e fotos do pré casamento, informações sobre a cerimônia e muito mais!</item>
+        <item>Queremos que os noivos se sintam seguros ao utilizar o nosso app, por isso pedimos que todos os usuários efetuem o cadastro para que possamos identificá-los. Obs: Não se preocupe, nós também não gostamos de spam. Seu email estará seguro conosco.</item>
+        <item>Não. Convidados podem acessar eventos e interagir dentro deles gratuitamente. Basta saber o código do evento.</item>
+    </string-array>
+
+    <string-array name="menu">
+        <item>FAQ</item>
+        <item>Contact</item>
+        <item>Logout</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

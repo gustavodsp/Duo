@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    tools:context=".Fragments.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/diag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:background="@drawable/bg_diag"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="20dp">
+
+        <RelativeLayout
+            android:id="@+id/cabec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/whiteicon" />
+
+            <LinearLayout
+                android:id="@+id/linear_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <view
+                    class="androidx.slidingpanelayout.widget.SlidingPaneLayout"
+                    android:layout_width="25dp"
+                    android:layout_height="1dp"
+                    android:background="@android:color/white" />
+
+                <view
+                    class="androidx.slidingpanelayout.widget.SlidingPaneLayout"
+                    android:layout_width="20dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/white" />
+
+                <view
+                    class="androidx.slidingpanelayout.widget.SlidingPaneLayout"
+                    android:layout_width="15dp"
+                    android:layout_height="1dp"
+                    android:background="@android:color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.example.project_duo.Others.TextViewAutoFit
+            android:id="@+id/txv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/photo_login"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-10dp"
+            android:layout_toLeftOf="@id/photo_login"
+            android:layout_toStartOf="@id/photo_login"
+            android:text="Nome Completo"
+            android:textColor="@color/black_dark"
+            android:textSize="25sp" />
+
+        <com.example.project_duo.Others.TextViewAvenir
+            android:id="@+id/txv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txv_name"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/photo_login"
+            android:layout_toStartOf="@id/photo_login"
+            android:text="email@email.com"
+            android:textColor="@color/black_light"
+            android:textSize="15sp" />
+
+        <com.example.project_duo.Others.RoundedImageView
+            android:id="@+id/photo_login"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp" />
+
+        <ImageButton
+            android:id="@+id/imb_edit"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/camera_photo" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.53"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <view class="androidx.recyclerview.widget.RecyclerView"
+            android:id="@+id/rv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txv_signature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.02"
+        android:gravity="bottom"
+        android:text="2020 Gustavo Pereira Dev"
+        android:textColor="@color/black_light" />
+
+</LinearLayout>

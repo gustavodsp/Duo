@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="dark_gray">#555555</color>
+    <color name="gray_btn_bg_color">#cecece</color>
+    <color name="gray_btn_bg_pressed_color">#bababa</color>
+    <color name="brown">#74635B</color>
+    <color name="bg_bege">#f6f6f6</color>
+    <color name="gold">#e6d59d</color>
+    <color name="black_light">#4b4b4b</color>
+    <color name="black_dark">#282828</color>
+</resources>
