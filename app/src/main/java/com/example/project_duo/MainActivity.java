@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import com.developer.kalert.KAlertDialog;
 import com.example.project_duo.Fragments.AlbumFragment;
+import com.example.project_duo.Fragments.CerimonyFragment;
 import com.example.project_duo.Fragments.HistoryFragment;
 import com.example.project_duo.Fragments.LoginFragment;
 import com.example.project_duo.Fragments.HomeFragment;
@@ -135,6 +136,13 @@ public class MainActivity extends FragmentActivity{
 
         AlbumFragment album = new AlbumFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, album).addToBackStack(null).commit();
+
+    }
+
+    public void loadCerimony(){
+
+        CerimonyFragment cerimony = new CerimonyFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, cerimony).addToBackStack(null).commit();
 
     }
 
