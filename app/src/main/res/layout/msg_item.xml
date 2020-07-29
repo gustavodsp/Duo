@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msg_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.example.project_duo.Others.RoundedImageView
+            android:id="@+id/imv_msgprofile"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <com.example.project_duo.Others.TextViewAvenir
+            android:id="@+id/txv_msgname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.example.project_duo.Others.TextViewAvenir
+        android:id="@+id/txv_msgtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/dark_gray" />
+
+    <view
+        class="androidx.slidingpanelayout.widget.SlidingPaneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/mb_gray" />
+
+</LinearLayout>

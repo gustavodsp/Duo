@@ -71,8 +71,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
-
 import static android.app.Activity.RESULT_OK;
 
 /**

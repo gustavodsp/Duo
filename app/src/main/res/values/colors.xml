@@ -3,7 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-
+    <color name="graytransparent">#ccffffff</color>
     <color name="dark_gray">#555555</color>
     <color name="gray_btn_bg_color">#cecece</color>
     <color name="gray_btn_bg_pressed_color">#bababa</color>

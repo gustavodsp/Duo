@@ -75,7 +75,7 @@ public class Tab3Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity mainActivity = (MainActivity) getActivity();
-//                mainActivity.loadMensagens();
+                mainActivity.loadMessages();
             }
         });
 

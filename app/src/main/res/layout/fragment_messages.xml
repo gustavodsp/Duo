@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Fragments.MessagesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/graytransparent"
+        android:orientation="horizontal">
+
+        <com.example.project_duo.Others.TextViewAvenir
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="Mensagens"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imb_newmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/write" />
+
+    </LinearLayout>
+
+    <view
+        class="androidx.slidingpanelayout.widget.SlidingPaneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mb_gray" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="100" />
+
+</LinearLayout>

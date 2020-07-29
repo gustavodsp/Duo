@@ -15,8 +15,10 @@ import com.example.project_duo.Fragments.HistoryFragment;
 import com.example.project_duo.Fragments.LoginFragment;
 import com.example.project_duo.Fragments.HomeFragment;
 import com.example.project_duo.Fragments.MapsFragment;
+import com.example.project_duo.Fragments.MessagesFragment;
 import com.example.project_duo.Fragments.Tab1Fragment;
 import com.example.project_duo.Fragments.TabBarFragment;
+import com.example.project_duo.Fragments.WriteFragment;
 
 public class MainActivity extends FragmentActivity{
 
@@ -151,6 +153,20 @@ public class MainActivity extends FragmentActivity{
 
         MapsFragment maps = new MapsFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, maps).addToBackStack(null).commit();
+
+    }
+
+    public void loadMessages(){
+
+        MessagesFragment messages = new MessagesFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, messages).addToBackStack(null).commit();
+
+    }
+
+    public void loadWrite(){
+
+        WriteFragment write = new WriteFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, write).addToBackStack(null).commit();
 
     }
 
