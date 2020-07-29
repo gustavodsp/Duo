@@ -14,6 +14,7 @@ import com.example.project_duo.Fragments.CerimonyFragment;
 import com.example.project_duo.Fragments.HistoryFragment;
 import com.example.project_duo.Fragments.LoginFragment;
 import com.example.project_duo.Fragments.HomeFragment;
+import com.example.project_duo.Fragments.MapsFragment;
 import com.example.project_duo.Fragments.Tab1Fragment;
 import com.example.project_duo.Fragments.TabBarFragment;
 
@@ -143,6 +144,13 @@ public class MainActivity extends FragmentActivity{
 
         CerimonyFragment cerimony = new CerimonyFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, cerimony).addToBackStack(null).commit();
+
+    }
+
+    public void loadMaps(){
+
+        MapsFragment maps = new MapsFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, maps).addToBackStack(null).commit();
 
     }
 

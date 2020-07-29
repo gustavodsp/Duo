@@ -156,17 +156,6 @@ public class CerimonyFragment extends Fragment {
             }
         });
 
-        ImageButton botao2 = (ImageButton) view.findViewById(R.id.imb_stv);
-        botao2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                MainActivity mainactivity = (MainActivity) getActivity();
-                mainactivity.loadStview();
-
-            }
-        });
-
         return view;
     }
 }

@@ -43,7 +43,7 @@
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <com.example.project_duo.Others.TextViewAvenir
                         android:id="@+id/txv_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginStart="10dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/imb_maps"
@@ -70,15 +70,13 @@
                         android:background="@android:color/transparent"
                         android:src="@drawable/maps" />
 
-                    <ImageButton
-                        android:id="@+id/imb_stv"
+                    <com.example.project_duo.Others.TextViewAvenir
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginStart="20dp"
-                        android:background="@android:color/transparent"
-                        android:src="@drawable/streetview" />
+                        android:layout_marginTop="10dp"
+                        android:text="Map"
+                        android:textColor="@color/brown"/>
+
                 </LinearLayout>
 
             </LinearLayout>
