@@ -77,8 +77,8 @@ public class WriteFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_write, container, false);
 
-        mensagem = (EditText) view.findViewById(R.id.editText2);
-        botao = (Button) view.findViewById(R.id.button8);
+        mensagem = (EditText) view.findViewById(R.id.edt_message);
+        botao = (Button) view.findViewById(R.id.btn_sendmsg);
 
         Typeface tf = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Avenir-Light.ttf");
         mensagem.setTypeface(tf);

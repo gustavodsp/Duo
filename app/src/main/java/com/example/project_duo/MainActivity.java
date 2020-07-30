@@ -10,12 +10,14 @@ import android.os.Bundle;
 
 import com.developer.kalert.KAlertDialog;
 import com.example.project_duo.Fragments.AlbumFragment;
+import com.example.project_duo.Fragments.CaptureFragment;
 import com.example.project_duo.Fragments.CerimonyFragment;
 import com.example.project_duo.Fragments.HistoryFragment;
 import com.example.project_duo.Fragments.LoginFragment;
 import com.example.project_duo.Fragments.HomeFragment;
 import com.example.project_duo.Fragments.MapsFragment;
 import com.example.project_duo.Fragments.MessagesFragment;
+import com.example.project_duo.Fragments.PhotosFragment;
 import com.example.project_duo.Fragments.Tab1Fragment;
 import com.example.project_duo.Fragments.TabBarFragment;
 import com.example.project_duo.Fragments.WriteFragment;
@@ -167,6 +169,20 @@ public class MainActivity extends FragmentActivity{
 
         WriteFragment write = new WriteFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, write).addToBackStack(null).commit();
+
+    }
+
+    public void loadPhotos(){
+
+        PhotosFragment photos = new PhotosFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, photos).addToBackStack(null).commit();
+
+    }
+
+    public void loadCapture(){
+
+        CaptureFragment capture = new CaptureFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, capture).addToBackStack(null).commit();
 
     }
 

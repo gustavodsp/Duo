@@ -25,27 +25,27 @@
         android:background="@color/mb_gray" />
 
     <com.example.project_duo.Others.MsgEditText
-        android:id="@+id/editText2"
+        android:id="@+id/edt_message"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
         android:layout_weight="1"
-        android:background="@drawable/textview_digitar"
+        android:background="@drawable/editview_type"
         android:gravity="top"
-        android:hint="Deixe sua mensagem aqui"
+        android:hint="Type your message here"
         android:imeOptions="actionGo"
         android:inputType="textMultiLine"
         android:textColor="@color/dark_gray"
         android:textSize="17sp" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btn_sendmsg"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:background="@drawable/enviar_btn"
-        android:text="Enviar"
+        android:text="Send"
         android:textAllCaps="false"
         android:textColor="@color/dark_gray"
         android:textSize="16sp" />

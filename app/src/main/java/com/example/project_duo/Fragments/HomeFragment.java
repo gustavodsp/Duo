@@ -445,7 +445,7 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
             }
 
             Uri file = Uri.fromFile(compressedFoto(new File(getFilepath())));
-            UploadTask uploadTask = storageReference.child("ProfilePhotos/"+LoginFragment.login_eventID).putFile(file);
+            UploadTask uploadTask = storageReference.child("ProfilePhotos/"+LoginFragment.login_email).putFile(file);
             uploadTask.addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
@@ -456,7 +456,7 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
             uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    storageReference.child("ProfilePhotos/"+LoginFragment.login_eventID).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    storageReference.child("ProfilePhotos/"+LoginFragment.login_email).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri downloadUrl) {
                             delRef.child(LoginFragment.login_user).child("photo").setValue(downloadUrl.toString());
