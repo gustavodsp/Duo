@@ -1,5 +1,7 @@
 package com.example.project_duo.Fragments;
 
+import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +9,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.project_duo.MainActivity;
 import com.example.project_duo.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +28,11 @@ import com.example.project_duo.R;
  * create an instance of this fragment.
  */
 public class Tab4Fragment extends Fragment {
+
+    Button presente;
+    TextView texto, ass;
+    ImageView imageView;
+    DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child("Codes").child(HomeFragment.codigo).child("presentes");
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +78,42 @@ public class Tab4Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab4, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab4, container, false);
+
+        presente = (Button) view.findViewById(R.id.btn_gift);
+        texto = (TextView) view.findViewById(R.id.txt_texto);
+        ass = (TextView) view.findViewById(R.id.txt_ass);
+        imageView = (ImageView) view.findViewById(R.id.imv_gift);
+
+        mRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                texto.setText(dataSnapshot.child("agradecimento").getValue(String.class));
+                ass.setText(dataSnapshot.child("ass").getValue(String.class));
+
+                String url = dataSnapshot.child("icone").getValue(String.class);
+                Uri uri = Uri.parse(url);
+                Glide.with(getActivity()).load(uri).into(imageView);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Avenir-Light.ttf");
+        presente.setTypeface(tf);
+        presente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainactivity = (MainActivity) getActivity();
+                mainactivity.loadGift();
+            }
+        });
+
+        return view;
     }
 }

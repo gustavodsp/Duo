@@ -1,6 +1,7 @@
 package com.example.project_duo.Fragments;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -15,6 +16,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -36,6 +38,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.developer.kalert.KAlertDialog;
 import com.example.project_duo.MainActivity;
 import com.example.project_duo.Others.AuxiliarRVClickListener;
 import com.example.project_duo.Others.FAQListAdapter;
@@ -58,6 +61,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.OnItemClickListener;
+import com.orhanobut.dialogplus.ViewHolder;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -166,7 +170,6 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
             @Override
             public void onGlobalLayout() {
                 int height = diagonalLayout.getMeasuredHeight();
-                Log.i("lala", "onGlobalLayout: "+height);
                 LayerDrawable layers = (LayerDrawable) diagonalLayout.getBackground();
                 layers.setLayerInset(1,0,height,(height*-1),(height*-1));
                 diagonalLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
@@ -477,190 +480,21 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
         final Typeface tf_roman = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Roman.otf");
         final Typeface tf_heavy = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Heavy.otf");
         switch (position){
-//            case 0:
-//
-//                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(DataSnapshot dataSnapshot) {
-//                        if(dataSnapshot.child(LoginFragment.login_user).hasChild("hasDue")){
-//                            new MaterialDialog.Builder(getActivity())
-//                                    .title("Oops...")
-//                                    .titleColorRes(android.R.color.black)
-//                                    .typeface(tf_heavy,tf_roman)
-//                                    .content("Você já tem uma Versão Due ativa. Para acessá-la, clique em Portal.")
-//                                    .contentColorRes(R.color.dark_gray)
-//                                    .positiveText("Ok")
-//                                    .positiveColorRes(android.R.color.holo_blue_dark)
-//                                    .show();
-//                        }else{
-//                            MainActivity mainactivity = (MainActivity) getActivity();
-//                            mainactivity.loadPromotion();
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(DatabaseError databaseError) {
-//
-//                    }
-//                });
-//
-//                break;
-            case 1:
+            case 0:
 
-//                final MaterialDialog dialog = new MaterialDialog.Builder(getActivity())
-//                        .title("Qual o nome do evento?")
-//                        .titleColorRes(android.R.color.black)
-//                        .typeface(tf_heavy,tf_roman)
-//                        .customView(R.layout.dialog_codigo,true)
-//                        .build();
-//
-//                code = (EditText) dialog.findViewById(R.id.editText18);
-//                btn_codigo = (Button) dialog.findViewById(R.id.button4);
-//                btn_codigo.setTypeface(tf_heavy);
-//                btn_codigo.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//
-//                        if(code.getText().toString().equals("")){
-//                            new MaterialDialog.Builder(getActivity())
-//                                    .title("Oops...")
-//                                    .titleColorRes(android.R.color.black)
-//                                    .typeface(tf_heavy,tf_roman)
-//                                    .content("Por favor, digite o nome da versão Due que deseja acessar.")
-//                                    .contentColorRes(R.color.dark_gray)
-//                                    .positiveText("Ok")
-//                                    .positiveColorRes(android.R.color.holo_blue_dark)
-//                                    .show();
-//                        } else{
-//                            auxiliar=0;
-//                            mRef.addChildEventListener(new ChildEventListener() {
-//                                @Override
-//                                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//                                    if(dataSnapshot.child("eventName").getValue(String.class).equals(code.getText().toString())){
-//                                        auxiliar=1;
-//                                        codigo = dataSnapshot.getKey();
-//                                    }
-//                                }
-//
-//                                @Override
-//                                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//
-//                                }
-//
-//                                @Override
-//                                public void onChildRemoved(DataSnapshot dataSnapshot) {
-//
-//                                }
-//
-//                                @Override
-//                                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//                                }
-//
-//                                @Override
-//                                public void onCancelled(DatabaseError databaseError) {
-//
-//                                }
-//                            });
-//
-//                            mRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//                                @Override
-//                                public void onDataChange(DataSnapshot dataSnapshot) {
-//                                    if(auxiliar==0){
-//                                        new MaterialDialog.Builder(getActivity())
-//                                                .title("Hmm...")
-//                                                .titleColorRes(android.R.color.black)
-//                                                .typeface(tf_heavy,tf_roman)
-//                                                .content("Parece que não há uma versão Due correspondente a este nome.")
-//                                                .contentColorRes(R.color.dark_gray)
-//                                                .positiveText("Ok")
-//                                                .positiveColorRes(android.R.color.holo_blue_dark)
-//                                                .onPositive(new MaterialDialog.SingleButtonCallback() {
-//                                                    @Override
-//                                                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-//                                                        code.setText(null);
-//                                                    }
-//                                                })
-//                                                .show();
-//                                    } else{
-//                                        if(dataSnapshot.child(codigo).hasChild("dateStart")){
-//                                            Uri uri = Uri.parse(dataSnapshot.child(codigo).child("video").child("songUrl").getValue(String.class));
-//                                            loadMusic(uri);
-//                                            MainActivity mainactivity = (MainActivity) getActivity();
-//                                            mainactivity.loadTabBar();
-//                                            dialog.dismiss();
-//                                        } else{
-//
-//                                            new MaterialDialog.Builder(getActivity())
-//                                                    .title("Hmm...")
-//                                                    .titleColorRes(android.R.color.black)
-//                                                    .typeface(tf_heavy,tf_roman)
-//                                                    .content("Parece que esta versão Due ainda não está online.")
-//                                                    .contentColorRes(R.color.dark_gray)
-//                                                    .positiveText("Ok")
-//                                                    .positiveColorRes(android.R.color.holo_blue_dark)
-//                                                    .onPositive(new MaterialDialog.SingleButtonCallback() {
-//                                                        @Override
-//                                                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-//                                                            code.setText(null);
-//                                                        }
-//                                                    })
-//                                                    .show();
-//
-//                                        }
-//                                    }
-//                                }
-//
-//                                @Override
-//                                public void onCancelled(DatabaseError databaseError) {
-//
-//                                }
-//                            });
-//
-//                        }
-//
-//                    }
-//                });
-//
-//                demo = (TextView) dialog.findViewById(R.id.textView33);
-//                demo.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//
-//                        codigo = "-Kw1Pb89rM1ZZaO7cxNs";
-//                        mRef.child(codigo).child("video").child("songUrl").addListenerForSingleValueEvent(new ValueEventListener() {
-//                            @Override
-//                            public void onDataChange(DataSnapshot dataSnapshot) {
-//
-//                                Uri uri = Uri.parse(dataSnapshot.getValue(String.class));
-//                                loadMusic(uri);
-//                                MainActivity mainactivity = (MainActivity) getActivity();
-//                                mainactivity.loadTabBar();
-//                                dialog.dismiss();
-//
-//                            }
-//
-//                            @Override
-//                            public void onCancelled(DatabaseError databaseError) {
-//
-//                            }
-//                        });
-//
-//                    }
-//                });
-//
-//                dialog.show();
-
-                codigo = "sample";
-                mRef.child(codigo).child("video").child("songUrl").addListenerForSingleValueEvent(new ValueEventListener() {
+                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        Uri uri = Uri.parse(dataSnapshot.getValue(String.class));
-                        loadMusic(uri);
-                        MainActivity mainactivity = (MainActivity) getActivity();
-                        mainactivity.loadTabBar();
-
+                        if(dataSnapshot.child(LoginFragment.login_user).hasChild("hasDue")){
+                            new KAlertDialog(getActivity(),KAlertDialog.ERROR_TYPE)
+                                    .setTitleText("Oops...")
+                                    .setContentText("You already have an active Due Version. To access and edit it, click on Editor.")
+                                    .setConfirmText("Ok")
+                                    .show();
+                        }else{
+                            MainActivity mainactivity = (MainActivity) getActivity();
+                            mainactivity.loadPromotion();
+                        }
                     }
 
                     @Override
@@ -670,40 +504,171 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
                 });
 
                 break;
-//            case 2:
-//
-//                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(DataSnapshot dataSnapshot) {
-//                        if(dataSnapshot.child(LoginFragment.login_user).hasChild("hasDue")){
-//                            MainActivity mainactivity = (MainActivity) getActivity();
-//                            mainactivity.loadPortal();
-//                        }else{
-//                            new SweetAlertDialog(getActivity(),SweetAlertDialog.ERROR_TYPE)
-//                                    .setTitleText("Oops...")
-//                                    .setContentText("Você ainda não adquiriu a sua versão Due para criar o seu evento! Gostaria de adquirir agora?")
-//                                    .setConfirmText("Sim, gostaria")
-//                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-//                                        @Override
-//                                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-//                                            sweetAlertDialog.dismiss();
-//                                            MainActivity mainactivity = (MainActivity) getActivity();
-//                                            mainactivity.loadPromotion();
-//                                        }
-//                                    })
-//                                    .showCancelButton(true)
-//                                    .setCancelText("Não, obrigado")
-//                                    .show();
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(DatabaseError databaseError) {
-//
-//                    }
-//                });
-//
-//                break;
+            case 1:
+
+                final DialogPlus dialog = DialogPlus.newDialog(getActivity())
+                        .setContentHolder(new ViewHolder(R.layout.dialog_codigo))
+                        .setGravity(Gravity.CENTER)
+                        .create();
+
+                code = (EditText) dialog.findViewById(R.id.edt_code);
+                btn_codigo = (Button) dialog.findViewById(R.id.btn_access);
+                btn_codigo.setTypeface(tf_heavy);
+                btn_codigo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        if(code.getText().toString().equals("")){
+                            new AlertDialog.Builder(getActivity())
+                                    .setTitle("Oops...")
+                                    .setMessage("Por favor, digite o nome da versão Due que deseja acessar.")
+                                    .setPositiveButton("Ok",null)
+                                    .show();
+                        } else{
+                            auxiliar=0;
+                            mRef.addChildEventListener(new ChildEventListener() {
+                                @Override
+                                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                                    if(dataSnapshot.child("eventName").getValue(String.class).equals(code.getText().toString())){
+                                        auxiliar=1;
+                                        codigo = dataSnapshot.getKey();
+                                    }
+                                }
+
+                                @Override
+                                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                                }
+
+                                @Override
+                                public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                                }
+
+                                @Override
+                                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
+                            mRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    if(auxiliar==0){
+                                        new AlertDialog.Builder(getActivity())
+                                                .setTitle("Hmm...")
+                                                .setMessage("Parece que não há uma versão Due correspondente a este nome.")
+                                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        code.setText(null);
+                                                    }
+                                                })
+                                                .show();
+                                    } else{
+                                        if(dataSnapshot.child(codigo).hasChild("dateStart")){
+                                            Uri uri = Uri.parse(dataSnapshot.child(codigo).child("video").child("songUrl").getValue(String.class));
+                                            loadMusic(uri);
+                                            MainActivity mainactivity = (MainActivity) getActivity();
+                                            mainactivity.loadTabBar();
+                                            dialog.dismiss();
+                                        } else{
+
+                                            new AlertDialog.Builder(getActivity())
+                                                    .setTitle("Hmm...")
+                                                    .setMessage("Parece que esta versão Due ainda não está online.")
+                                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(DialogInterface dialog, int which) {
+                                                            code.setText(null);
+                                                        }
+                                                    })
+                                                    .show();
+
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
+                        }
+
+                    }
+                });
+
+                demo = (TextView) dialog.findViewById(R.id.txv_demo);
+                demo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        codigo = "sample";
+                        mRef.child(codigo).child("video").child("songUrl").addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                Uri uri = Uri.parse(dataSnapshot.getValue(String.class));
+                                loadMusic(uri);
+                                MainActivity mainactivity = (MainActivity) getActivity();
+                                mainactivity.loadTabBar();
+                                dialog.dismiss();
+
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
+
+                    }
+                });
+
+                dialog.show();
+
+                break;
+            case 2:
+
+                delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.child(LoginFragment.login_user).hasChild("hasDue")){
+                            MainActivity mainactivity = (MainActivity) getActivity();
+                            mainactivity.loadEditor();
+                        }else{
+                            new KAlertDialog(getActivity(),KAlertDialog.ERROR_TYPE)
+                                    .setTitleText("Oops...")
+                                    .setContentText("You haven't gotten your Duo version to create your event yet! Would you like to get it now?")
+                                    .setConfirmText("Yes, of course")
+                                    .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
+                                        @Override
+                                        public void onClick(KAlertDialog kAlertDialog) {
+                                            kAlertDialog.dismiss();
+                                            MainActivity mainactivity = (MainActivity) getActivity();
+                                            mainactivity.loadPromotion();
+                                        }
+                                    })
+                                    .showCancelButton(true)
+                                    .setCancelText("No, thanks")
+                                    .show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+                break;
         }
     }
 

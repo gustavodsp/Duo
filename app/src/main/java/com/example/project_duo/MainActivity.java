@@ -12,12 +12,16 @@ import com.developer.kalert.KAlertDialog;
 import com.example.project_duo.Fragments.AlbumFragment;
 import com.example.project_duo.Fragments.CaptureFragment;
 import com.example.project_duo.Fragments.CerimonyFragment;
+import com.example.project_duo.Fragments.CheckoutFragment;
+import com.example.project_duo.Fragments.EditorFragment;
+import com.example.project_duo.Fragments.GiftFragment;
 import com.example.project_duo.Fragments.HistoryFragment;
 import com.example.project_duo.Fragments.LoginFragment;
 import com.example.project_duo.Fragments.HomeFragment;
 import com.example.project_duo.Fragments.MapsFragment;
 import com.example.project_duo.Fragments.MessagesFragment;
 import com.example.project_duo.Fragments.PhotosFragment;
+import com.example.project_duo.Fragments.PromotionFragment;
 import com.example.project_duo.Fragments.Tab1Fragment;
 import com.example.project_duo.Fragments.TabBarFragment;
 import com.example.project_duo.Fragments.WriteFragment;
@@ -183,6 +187,34 @@ public class MainActivity extends FragmentActivity{
 
         CaptureFragment capture = new CaptureFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, capture).addToBackStack(null).commit();
+
+    }
+
+    public void loadGift(){
+
+        GiftFragment gift = new GiftFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, gift).addToBackStack(null).commit();
+
+    }
+
+    public void loadPromotion(){
+
+        PromotionFragment promotion = new PromotionFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, promotion).addToBackStack(null).commit();
+
+    }
+
+    public void loadCheckout(){
+
+        CheckoutFragment checkout = new CheckoutFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, checkout).commit();
+
+    }
+
+    public void loadEditor(){
+
+        EditorFragment editor = new EditorFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, editor).addToBackStack(null).commit();
 
     }
 

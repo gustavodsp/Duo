@@ -1,14 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_bege"
     tools:context=".Fragments.Tab4Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tab 4" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:weightSum="1">
 
-</FrameLayout>
+        <com.example.project_duo.Others.TextViewAvenir
+            android:id="@+id/txt_pessoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guys,"
+            android:textColor="@color/brown"
+            android:textSize="18sp" />
+
+        <com.example.project_duo.Others.TextViewAvenir
+            android:id="@+id/txt_texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/brown"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_ass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:fontFamily="cursive"
+            android:textColor="@color/brown"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/imv_gift"
+            android:layout_width="240dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btn_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_button"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Gift"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_gray"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
