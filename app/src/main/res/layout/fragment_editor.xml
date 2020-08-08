@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Portal"
+            android:text="Editor"
             android:textColor="@color/black_light"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -84,6 +84,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:orientation="horizontal">
 
             <com.example.project_duo.Others.TextViewAvenir
@@ -94,7 +96,7 @@
                 android:paddingLeft="5dp"
                 android:text="Status:"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <com.example.project_duo.Others.TextViewAvenir
                 android:id="@+id/textView78"
@@ -102,57 +104,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="5dp"
                 android:textColor="@color/dark_gray"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <com.example.project_duo.Others.TextViewAvenir
-                android:id="@+id/textView79"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="5dp"
-                android:text="Início em:"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="16sp" />
-
-            <com.example.project_duo.Others.TextViewAvenir
-                android:id="@+id/textView80"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="5dp"
-                android:textColor="@color/dark_gray"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <com.example.project_duo.Others.TextViewAvenir
-                android:id="@+id/textView81"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="5dp"
-                android:text="Válida até:"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="16sp" />
-
-            <com.example.project_duo.Others.TextViewAvenir
-                android:id="@+id/textView82"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="5dp"
-                android:textColor="@color/dark_gray"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <RelativeLayout
@@ -169,24 +121,11 @@
                 android:background="@drawable/btn_black"
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp"
-                android:text="Iniciar"
+                android:text="Start"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:background="@drawable/btn_black"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp"
-                android:text="Renovar"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:visibility="invisible" />
         </RelativeLayout>
 
     </LinearLayout>

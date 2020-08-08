@@ -488,7 +488,7 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
                         if(dataSnapshot.child(LoginFragment.login_user).hasChild("hasDue")){
                             new KAlertDialog(getActivity(),KAlertDialog.ERROR_TYPE)
                                     .setTitleText("Oops...")
-                                    .setContentText("You already have an active Due Version. To access and edit it, click on Editor.")
+                                    .setContentText("You already have an active Duo Version. To access and edit it, click on Editor.")
                                     .setConfirmText("Ok")
                                     .show();
                         }else{
@@ -521,7 +521,7 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
                         if(code.getText().toString().equals("")){
                             new AlertDialog.Builder(getActivity())
                                     .setTitle("Oops...")
-                                    .setMessage("Por favor, digite o nome da versão Due que deseja acessar.")
+                                    .setMessage("Before you continue, type the name of the version you want to access.")
                                     .setPositiveButton("Ok",null)
                                     .show();
                         } else{
@@ -562,7 +562,7 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
                                     if(auxiliar==0){
                                         new AlertDialog.Builder(getActivity())
                                                 .setTitle("Hmm...")
-                                                .setMessage("Parece que não há uma versão Due correspondente a este nome.")
+                                                .setMessage("It looks like it doesn't exist a version with this name.")
                                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                                     @Override
                                                     public void onClick(DialogInterface dialog, int which) {
@@ -581,7 +581,7 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
 
                                             new AlertDialog.Builder(getActivity())
                                                     .setTitle("Hmm...")
-                                                    .setMessage("Parece que esta versão Due ainda não está online.")
+                                                    .setMessage("The version you are trying to access is not online yet. Wait until the engaged couple set up their version.")
                                                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                                         @Override
                                                         public void onClick(DialogInterface dialog, int which) {

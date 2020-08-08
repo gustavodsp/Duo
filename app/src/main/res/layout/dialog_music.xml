@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_musica"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView48"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/songimage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <com.example.project_duo.Others.TextViewAvenir
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Song's name"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView49"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView48"
+            android:layout_marginTop="-30dp"
+            android:background="@drawable/circle_white_shadow"
+            android:scaleType="center"
+            android:src="@drawable/playsong" />
+
+        <ImageView
+            android:id="@+id/imageView50"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView48"
+            android:layout_marginTop="-30dp"
+            android:background="@drawable/circle_white_shadow"
+            android:scaleType="center"
+            android:src="@drawable/stopsong"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Playlist"
+        android:textColor="@color/black_dark"
+        android:textSize="20sp" />
+
+    <view
+        class="androidx.slidingpanelayout.widget.SlidingPaneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/mb_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_music1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="I."
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The nest"
+                    android:textColor="@color/black_dark"
+                    android:textSize="16sp" />
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Josh Woodward"
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="3:22"
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_music2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="II."
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Don't close your eyes"
+                    android:textColor="@color/black_dark"
+                    android:textSize="16sp" />
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Josh Woodward"
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="3:32"
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_music3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="III."
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bloom"
+                    android:textColor="@color/black_dark"
+                    android:textSize="16sp" />
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Josh Woodward"
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+                <com.example.project_duo.Others.TextViewAvenir
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="3:26"
+                    android:textColor="@color/dark_gray" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="Send"
+        android:textAllCaps="false" />
+
+</LinearLayout>

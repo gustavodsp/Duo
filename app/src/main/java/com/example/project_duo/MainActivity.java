@@ -13,6 +13,7 @@ import com.example.project_duo.Fragments.AlbumFragment;
 import com.example.project_duo.Fragments.CaptureFragment;
 import com.example.project_duo.Fragments.CerimonyFragment;
 import com.example.project_duo.Fragments.CheckoutFragment;
+import com.example.project_duo.Fragments.EditTab1Fragment;
 import com.example.project_duo.Fragments.EditorFragment;
 import com.example.project_duo.Fragments.GiftFragment;
 import com.example.project_duo.Fragments.HistoryFragment;
@@ -130,7 +131,7 @@ public class MainActivity extends FragmentActivity{
     public void loadTabBar() {
 
         TabBarFragment tabbar = new TabBarFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, tabbar).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, tabbar).addToBackStack(null).commit();
 
     }
 
@@ -215,6 +216,13 @@ public class MainActivity extends FragmentActivity{
 
         EditorFragment editor = new EditorFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, editor).addToBackStack(null).commit();
+
+    }
+
+    public void loadEditTab1(){
+
+        EditTab1Fragment edt_tab1 = new EditTab1Fragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, edt_tab1).addToBackStack(null).commit();
 
     }
 
