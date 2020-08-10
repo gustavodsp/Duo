@@ -84,21 +84,7 @@ public class PadrinhosFragment extends Fragment {
         final ImageView image = (ImageView) l.findViewById(R.id.content);
 
         final DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child("Codes").child(HomeFragment.codigo).child("padrinhos");
-//        mRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                int aux = pos+1;
-//                tv.setText(dataSnapshot.child("padrinho"+aux).child("texto").getValue(String.class));
-//                String url = dataSnapshot.child("padrinho"+aux).child("foto").getValue(String.class);
-//                Uri uri = Uri.parse(url);
-//                Glide.with(getActivity()).load(uri).centerCrop().into(image);
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
+
         mRef.addChildEventListener(new ChildEventListener() {
             int aux=0;
             @Override

@@ -132,7 +132,6 @@ public class EditAlbumFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_edit_album, container, false);
 
-        final Typeface tf_roman = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Roman.otf");
         final Typeface tf_heavy = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Heavy.otf");
 
         add = (TextView) view.findViewById(R.id.textView102);
@@ -155,13 +154,13 @@ public class EditAlbumFragment extends Fragment {
             @NonNull
             @Override
             public AlbumViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                Log.i("lala", "onCreateViewHolder: ");
+
                 View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.album_item, parent, false);
                 return new AlbumViewHolder(view);
             }
             @Override
             protected void onBindViewHolder(final AlbumViewHolder viewHolder, final int position, final FileInfoAlbum model) {
-                Log.i("lala", "onBindViewHolder: ");
+
                 viewHolder.imageView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {

@@ -45,8 +45,6 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.io.File;
-
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link PhotosFragment#newInstance} factory method to

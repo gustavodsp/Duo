@@ -1,7 +1,6 @@
 package com.example.project_duo.Fragments;
 
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,10 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.example.project_duo.MainActivity;
 import com.example.project_duo.R;
 import com.google.firebase.database.DataSnapshot;
@@ -31,7 +28,6 @@ public class Tab4Fragment extends Fragment {
 
     Button presente;
     TextView texto, ass;
-    ImageView imageView;
     DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child("Codes").child(HomeFragment.codigo).child("presentes");
 
     // TODO: Rename parameter arguments, choose names that match
@@ -83,7 +79,6 @@ public class Tab4Fragment extends Fragment {
         presente = (Button) view.findViewById(R.id.btn_gift);
         texto = (TextView) view.findViewById(R.id.txt_texto);
         ass = (TextView) view.findViewById(R.id.txt_ass);
-        imageView = (ImageView) view.findViewById(R.id.imv_gift);
 
         mRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -91,10 +86,6 @@ public class Tab4Fragment extends Fragment {
 
                 texto.setText(dataSnapshot.child("agradecimento").getValue(String.class));
                 ass.setText(dataSnapshot.child("ass").getValue(String.class));
-
-                String url = dataSnapshot.child("icone").getValue(String.class);
-                Uri uri = Uri.parse(url);
-                Glide.with(getActivity()).load(uri).into(imageView);
 
             }
 

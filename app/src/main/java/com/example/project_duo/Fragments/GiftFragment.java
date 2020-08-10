@@ -20,7 +20,6 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.project_duo.MainActivity;
 import com.example.project_duo.R;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
@@ -33,7 +32,7 @@ import com.orhanobut.dialogplus.ViewHolder;
 public class GiftFragment extends Fragment {
 
     Spinner spinner;
-    EditText edt_nome, edt_numero, edt_mes, edt_ano, edt_cvc;
+    EditText edt_numero;
     ImageButton button;
     TextView help;
 

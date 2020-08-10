@@ -14,6 +14,9 @@ import com.example.project_duo.Fragments.CaptureFragment;
 import com.example.project_duo.Fragments.CerimonyFragment;
 import com.example.project_duo.Fragments.CheckoutFragment;
 import com.example.project_duo.Fragments.EditTab1Fragment;
+import com.example.project_duo.Fragments.EditTab2Fragment;
+import com.example.project_duo.Fragments.EditTab3Fragment;
+import com.example.project_duo.Fragments.EditTab4Fragment;
 import com.example.project_duo.Fragments.EditorFragment;
 import com.example.project_duo.Fragments.GiftFragment;
 import com.example.project_duo.Fragments.HistoryFragment;
@@ -223,6 +226,27 @@ public class MainActivity extends FragmentActivity{
 
         EditTab1Fragment edt_tab1 = new EditTab1Fragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, edt_tab1).addToBackStack(null).commit();
+
+    }
+
+    public void loadEditTab2(){
+
+        EditTab2Fragment edt_tab2 = new EditTab2Fragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, edt_tab2).addToBackStack(null).commit();
+
+    }
+
+    public void loadEditTab3(){
+
+        EditTab3Fragment edt_tab3 = new EditTab3Fragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, edt_tab3).addToBackStack(null).commit();
+
+    }
+
+    public void loadEditTab4(){
+
+        EditTab4Fragment edt_tab4 = new EditTab4Fragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, edt_tab4).addToBackStack(null).commit();
 
     }
 

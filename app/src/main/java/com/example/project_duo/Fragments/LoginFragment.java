@@ -1,8 +1,6 @@
 package com.example.project_duo.Fragments;
 
-import android.content.Context;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;

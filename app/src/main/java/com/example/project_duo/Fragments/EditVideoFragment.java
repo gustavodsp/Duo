@@ -49,11 +49,9 @@ import com.orhanobut.dialogplus.ViewHolder;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -142,7 +140,6 @@ public class EditVideoFragment extends Fragment {
 
         final Typeface tf_roman = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Roman.otf");
         final Typeface tf_heavy = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Heavy.otf");
-        final Typeface tf_black = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Black.otf");
 
         txt_video.setTypeface(tf_heavy);
         txt_musica.setTypeface(tf_heavy);

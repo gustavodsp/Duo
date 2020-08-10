@@ -54,7 +54,6 @@ public class EditorFragment extends Fragment implements AuxiliarRVClickListener 
     Button startDue;
     ImageButton editName, share;
 
-    int tela;
     int hasName;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -111,7 +110,6 @@ public class EditorFragment extends Fragment implements AuxiliarRVClickListener 
         share = (ImageButton) view.findViewById(R.id.imageButton11);
         startDue = (Button) view.findViewById(R.id.button14);
 
-        final Typeface tf_roman = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Roman.otf");
         final Typeface tf_heavy = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Heavy.otf");
         final Typeface tf_black = Typeface.createFromAsset(getActivity().getAssets(),"fonts/AvenirLTStd-Black.otf");
 
@@ -339,7 +337,7 @@ public class EditorFragment extends Fragment implements AuxiliarRVClickListener 
 
         String[] titles = new String[]{"Couple screen","Groomsman/Bridesmaid","Event", "Gifts"};
         int[] icons = new int[]{R.drawable.video, R.drawable.padrinhos, R.drawable.map, R.drawable.cart};
-        String[] num_itens = new String[]{"7 items", "1 item", "4 items", "1 item"};
+        String[] num_itens = new String[]{"7 items", "1 item", "4 items", "2 items"};
 
         edit_portal = new ArrayList<>();
         for(int i=0;i<4;i++){
@@ -367,17 +365,17 @@ public class EditorFragment extends Fragment implements AuxiliarRVClickListener 
                 break;
             case 1:
 
-//                mainActivity.loadEditTab2();
+                mainActivity.loadEditTab2();
 
                 break;
             case 2:
 
-//                mainActivity.loadEditTab3();
+                mainActivity.loadEditTab3();
 
                 break;
             case 3:
 
-//                mainActivity.loadEditTab4();
+                mainActivity.loadEditTab4();
 
                 break;
         }

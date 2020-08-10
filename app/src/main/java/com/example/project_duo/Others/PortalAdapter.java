@@ -149,35 +149,35 @@ public class PortalAdapter extends RecyclerView.Adapter<PortalAdapter.MyViewHold
                     int count=0;
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.hasChild("endereco")) {
-                            if (!dataSnapshot.child("endereco").getValue(String.class).isEmpty()) {
+                        if(dataSnapshot.hasChild("locationAddress")) {
+                            if (!dataSnapshot.child("locationAddress").getValue(String.class).isEmpty()) {
                                 count++;
                                 holder.progressBar.setProgress(count);
                                 double progresso3 = (double) holder.progressBar.getProgress() / holder.progressBar.getMax() * 100;
                                 holder.tvProgresso.setText(String.format("%.0f", progresso3) + "%");
                             }
                         }
-                        if(dataSnapshot.hasChild("fotolocal")) {
-                            if (!dataSnapshot.child("fotolocal").getValue(String.class).isEmpty()) {
+                        if(dataSnapshot.hasChild("locationPhoto")) {
+                            if (!dataSnapshot.child("locationPhoto").getValue(String.class).isEmpty()) {
                                 count++;
                                 holder.progressBar.setProgress(count);
                                 double progresso3 = (double) holder.progressBar.getProgress() / holder.progressBar.getMax() * 100;
                                 holder.tvProgresso.setText(String.format("%.0f", progresso3) + "%");
                             }
                         }
-                        if(dataSnapshot.hasChild("localizacao")) {
+                        if(dataSnapshot.hasChild("coordLat")) {
                             count++;
                             holder.progressBar.setProgress(count);
                             double progresso3 = (double) holder.progressBar.getProgress() / holder.progressBar.getMax() * 100;
                             holder.tvProgresso.setText(String.format("%.0f", progresso3) + "%");
                         }
-                        if(dataSnapshot.hasChild("nomelocal")) {
-                            if (!dataSnapshot.child("nomelocal").getValue(String.class).isEmpty()) {
+                        if(dataSnapshot.hasChild("info")) {
+
                                 count++;
                                 holder.progressBar.setProgress(count);
                                 double progresso3 = (double) holder.progressBar.getProgress() / holder.progressBar.getMax() * 100;
                                 holder.tvProgresso.setText(String.format("%.0f", progresso3) + "%");
-                            }
+
                         }
                     }
 
@@ -191,11 +191,19 @@ public class PortalAdapter extends RecyclerView.Adapter<PortalAdapter.MyViewHold
                 holder.dot3.getBackground().setColorFilter(ContextCompat.getColor(context,R.color.mb_gray), PorterDuff.Mode.SRC_IN);
                 holder.dot4.getBackground().setColorFilter(ContextCompat.getColor(context,R.color.dark_gray), PorterDuff.Mode.SRC_IN);
 
-                mRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                mRef.child("presentes").addListenerForSingleValueEvent(new ValueEventListener() {
+                    int count=0;
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.hasChild("stripeAccount")){
-                            holder.progressBar.setProgress(1);
+                        if(dataSnapshot.hasChild("agradecimento")){
+                            count++;
+                            holder.progressBar.setProgress(count);
+                            double progresso4 = (double) holder.progressBar.getProgress()/holder.progressBar.getMax()*100;
+                            holder.tvProgresso.setText(String.format("%.0f",progresso4)+"%");
+                        }
+                        if(dataSnapshot.hasChild("ass")){
+                            count++;
+                            holder.progressBar.setProgress(count);
                             double progresso4 = (double) holder.progressBar.getProgress()/holder.progressBar.getMax()*100;
                             holder.tvProgresso.setText(String.format("%.0f",progresso4)+"%");
                         }

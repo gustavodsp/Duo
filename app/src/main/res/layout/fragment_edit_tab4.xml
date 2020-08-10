@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Fragments.EditTab4Fragment">
+
+    <TextView
+        android:id="@+id/txt_gift_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Acknowledgment"
+        android:textColor="@color/black_light"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edt_gift_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/gray_square_light"
+        android:gravity="top"
+        android:hint="Type here a message of thank for your guests and tell them about the gift mechanism..."
+        android:inputType="textMultiLine"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/black_light"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Signature"
+        android:textColor="@color/black_light"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edt_gift_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gray_square_light"
+        android:hint="Loy and Hei"
+        android:padding="5dp"
+        android:textColor="@color/black_light"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_update_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_black"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

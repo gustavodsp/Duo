@@ -45,7 +45,8 @@
             android:layout_width="240dp"
             android:layout_height="160dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:src="@drawable/joinha"/>
 
         <Button
             android:id="@+id/btn_gift"
