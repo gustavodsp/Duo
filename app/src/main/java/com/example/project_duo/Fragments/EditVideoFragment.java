@@ -49,7 +49,11 @@ import com.orhanobut.dialogplus.ViewHolder;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -74,7 +78,7 @@ public class EditVideoFragment extends Fragment {
     LinearLayout d_music1, d_music2, d_music3;
     Button d_enviar;
 
-    String filepath, musicChoosed;
+    String filepath, musicChoosed, dataString;
 
     public static final int REQUEST_VIDEO_STORAGE = 1;
 
@@ -320,6 +324,10 @@ public class EditVideoFragment extends Fragment {
                     @Override
                     public void onDateSet(DatePicker datePicker, int y, int m, int d) {
                         data.setText(d+"/"+(m+1)+"/"+y);
+                        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM dd, yyyy");
+                        dataString = dateFormat.format(new Date(y-1900,m,d));
+                        Log.i("lala", "onDateSet: "+dataString);
+
                     }
                 },ano,mes,dia);
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis()-1000);
@@ -332,6 +340,7 @@ public class EditVideoFragment extends Fragment {
             public void onClick(View view) {
                 if(!data.getText().toString().equals("")){
                     mRef.child("data").setValue(data.getText().toString());
+                    mRef.child("dataString").setValue(dataString);
 //                    Toast.makeText(getActivity(), "Dados atualizados com sucesso!", Toast.LENGTH_SHORT).show();
                 }
                 if(musicChoosed!=null){

@@ -4,6 +4,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.os.CountDownTimer;
@@ -34,12 +35,12 @@ import java.util.Calendar;
 public class Tab1Fragment extends Fragment {
 
     public static int speaking=1;
-    TextView textdias, texthoras, textminutos, textsegundos, data, noivos;
+    TextView textdias, texthoras, textminutos, textsegundos, data, name;
     VideoView videoView;
     com.getbase.floatingactionbutton.FloatingActionButton som, album, casal;
     FloatingActionsMenu menu;
-    DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child("Codes").child(HomeFragment.codigo).child("video");
-
+    DatabaseReference dRef = FirebaseDatabase.getInstance().getReference().child("Codes").child(HomeFragment.codigo);
+    DatabaseReference mRef = dRef.child("video");
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -92,7 +93,7 @@ public class Tab1Fragment extends Fragment {
         textsegundos = (TextView) view.findViewById(R.id.segundos);
 
         data = (TextView) view.findViewById(R.id.txv_date);
-        noivos = (TextView) view.findViewById(R.id.txv_couplenames);
+        name = (TextView) view.findViewById(R.id.txv_couplenames);
 
         videoView = (VideoView) view.findViewById(R.id.videoView);
 
@@ -101,12 +102,23 @@ public class Tab1Fragment extends Fragment {
         album = (com.getbase.floatingactionbutton.FloatingActionButton) view.findViewById(R.id.album);
         casal = (com.getbase.floatingactionbutton.FloatingActionButton) view.findViewById(R.id.casal);
 
+        dRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                name.setText(snapshot.child("eventName").getValue(String.class));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         mRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                data.setText(dataSnapshot.child("datastring").getValue(String.class));
-                noivos.setText(dataSnapshot.child("casal").getValue(String.class));
+                data.setText(dataSnapshot.child("dataString").getValue(String.class));
 
                 String date = dataSnapshot.child("data").getValue().toString();
 

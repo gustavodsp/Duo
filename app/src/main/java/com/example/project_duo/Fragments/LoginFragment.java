@@ -270,6 +270,28 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        gmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogPlus dialogPlus = DialogPlus.newDialog(getActivity())
+                        .setContentHolder(new ViewHolder(R.layout.dialog_construction))
+                        .setGravity(Gravity.CENTER)
+                        .create();
+                dialogPlus.show();
+            }
+        });
+
+        face.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogPlus dialogPlus = DialogPlus.newDialog(getActivity())
+                        .setContentHolder(new ViewHolder(R.layout.dialog_construction))
+                        .setGravity(Gravity.CENTER)
+                        .create();
+                dialogPlus.show();
+            }
+        });
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {

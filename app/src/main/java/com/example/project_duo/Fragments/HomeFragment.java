@@ -465,7 +465,7 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
                             delRef.child(LoginFragment.login_user).child("photo").setValue(downloadUrl.toString());
                             Glide.with(getActivity()).load(downloadUrl).centerCrop().into(photo);
                             LoginFragment.login_photo = downloadUrl.toString();
-                            Toast.makeText(getActivity(), "Foto atualizada com sucesso!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Profile image updated successfully!", Toast.LENGTH_SHORT).show();
                         }
                     });
 

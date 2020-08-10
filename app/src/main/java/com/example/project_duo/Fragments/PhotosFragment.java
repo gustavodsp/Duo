@@ -157,8 +157,12 @@ public class PhotosFragment extends Fragment {
                 viewHolder.nome.setText(model.getName());
 
                 final String url = model.getProfilePhoto();
-                Uri uri = Uri.parse(url);
-                Glide.with(getActivity()).load(uri).centerCrop().into(viewHolder.profile);
+                if(url!=null) {
+                    Uri uri = Uri.parse(url);
+                    Glide.with(getActivity()).load(uri).centerCrop().into(viewHolder.profile);
+                }else{
+                    viewHolder.profile.setImageResource(R.drawable.hint);
+                }
 
                 if(model.getCaption()!=null) {
 
@@ -259,12 +263,11 @@ public class PhotosFragment extends Fragment {
     }
 
     public void downloadFile(String uRl) {
-        File direct = new File(Environment.getExternalStorageDirectory()
-                + "/DueApp");
-
-        if (!direct.exists()) {
-            direct.mkdirs();
-        }
+//        File direct = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/Duo");
+//
+//        if (!direct.exists()) {
+//            direct.mkdirs();
+//        }
 
         DownloadManager mgr = (DownloadManager) getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
 
@@ -275,9 +278,10 @@ public class PhotosFragment extends Fragment {
         request.setAllowedNetworkTypes(
                 DownloadManager.Request.NETWORK_WIFI
                         | DownloadManager.Request.NETWORK_MOBILE)
-                .setAllowedOverRoaming(false).setTitle("Duo")
+                .setAllowedOverRoaming(false)
+                .setTitle("Duo")
                 .setDescription("Download from Duo App.")
-                .setDestinationInExternalPublicDir("/DueApp", "duoImage.jpg");
+                .setDestinationInExternalPublicDir(Environment.DIRECTORY_PICTURES, "duoImage.jpg");
 
         mgr.enqueue(request);
 

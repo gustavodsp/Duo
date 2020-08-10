@@ -58,16 +58,16 @@ public class MainActivity extends FragmentActivity{
 
         if (count == 0) {
             KAlertDialog alertDialog = new KAlertDialog(this);
-            alertDialog.setTitleText("Sair");
-            alertDialog.setContentText("Você deseja sair do aplicativo?");
-            alertDialog.setConfirmText("Sim");
+            alertDialog.setTitleText("Exit");
+            alertDialog.setContentText("Are you sure you want to leave?");
+            alertDialog.setConfirmText("Yes");
             alertDialog.setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
                 @Override
                 public void onClick(KAlertDialog kAlertDialog) {
                     MainActivity.super.onBackPressed();
                 }
             });
-            alertDialog.setCancelText("Nao");
+            alertDialog.setCancelText("No");
             alertDialog.show();
 
         } else {
@@ -131,7 +131,7 @@ public class MainActivity extends FragmentActivity{
     public void loadTabBar() {
 
         TabBarFragment tabbar = new TabBarFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, tabbar).addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer, tabbar).commit();
 
     }
 

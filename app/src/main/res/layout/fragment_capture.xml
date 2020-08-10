@@ -41,15 +41,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/gallery" />
 
-        <ImageButton
-            android:id="@+id/imb_camera"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:background="@android:color/transparent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/camera_photo" />
     </LinearLayout>
 
     <LinearLayout

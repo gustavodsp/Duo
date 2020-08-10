@@ -11,6 +11,7 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
@@ -61,7 +62,7 @@ public class CaptureFragment extends Fragment {
     RelativeLayout preview;
     CustomImageView customimageView;
     Button btn_enviar;
-    ImageButton btn_gallery, btn_new;
+    ImageButton btn_gallery;
     EditText legenda;
 
     String filepath;
@@ -120,7 +121,6 @@ public class CaptureFragment extends Fragment {
 
         preview = (RelativeLayout) view.findViewById(R.id.preview);
         customimageView = (CustomImageView) view.findViewById(R.id.cimv_rounded);
-        btn_new = (ImageButton) view.findViewById(R.id.imb_camera);
         btn_gallery = (ImageButton) view.findViewById(R.id.imb_gallery);
         legenda = (EditText) view.findViewById(R.id.edt_caption);
 
@@ -134,14 +134,6 @@ public class CaptureFragment extends Fragment {
             public void onGlobalLayout() {
                 preview.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,preview.getMeasuredWidth()*3/4));
                 preview.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-            }
-        });
-
-        btn_new.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
             }
         });
 
@@ -161,7 +153,7 @@ public class CaptureFragment extends Fragment {
             public void onClick(View v) {
 
                 if(changed==0){
-                    Toast.makeText(getActivity(), "Nenhuma imagem selecionada. Escolha entre Câmera ou Galeria nos botões acima, para selecionar uma foto.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "No image selected. Click on the camera button above to pick a new picture.", Toast.LENGTH_LONG).show();
                 }
                 else {
 
@@ -276,6 +268,17 @@ public class CaptureFragment extends Fragment {
 //                    }
 //                }, 1000);
 
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intent.setType("image/*");
+                startActivityForResult(Intent.createChooser(intent, "Select a picture"), REQUEST_IMAGE_CAPTURE);
+            }
         }
     }
 

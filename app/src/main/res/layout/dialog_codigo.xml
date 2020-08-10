@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:ems="12"
-        android:hint="Ex.: HecLoy"
+        android:hint="Ex.: LoHeS2"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"

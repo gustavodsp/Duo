@@ -119,8 +119,12 @@ public class MessagesFragment extends Fragment {
                 viewHolder.nameText.setText(model.getName());
 
                 final String url = model.getPhoto();
-                Uri uri = Uri.parse(url);
-                Glide.with(getActivity()).load(uri).centerCrop().into(viewHolder.profilePhoto);
+                if(url!=null) {
+                    Uri uri = Uri.parse(url);
+                    Glide.with(getActivity()).load(uri).centerCrop().into(viewHolder.profilePhoto);
+                }else{
+                    viewHolder.profilePhoto.setImageResource(R.drawable.hint);
+                }
 
                 viewHolder.msgLayout.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
