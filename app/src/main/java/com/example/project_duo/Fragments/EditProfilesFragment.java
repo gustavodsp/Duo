@@ -215,7 +215,7 @@ public class EditProfilesFragment extends Fragment {
                         galeriapermission();
                         Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                         intent.setType("image/*");
-                        startActivityForResult(Intent.createChooser(intent, "Selecione uma imagem"), REQUEST_IMAGE_CAPTURE);
+                        startActivityForResult(Intent.createChooser(intent, "Select an image"), REQUEST_IMAGE_CAPTURE);
                     }
                 });
 
@@ -270,8 +270,8 @@ public class EditProfilesFragment extends Fragment {
                                 }
                             } else{
                                 if(!d_nome.getText().toString().equals("")){
-                                    mRef.child("noiva").child("nome").setValue(d_nome.getText().toString());
-                                    noivaName.setText(d_nome.getText().toString());
+                                    mRef.child("noivo").child("nome").setValue(d_nome.getText().toString());
+                                    noivoName.setText(d_nome.getText().toString());
                                     new KAlertDialog(getActivity(), KAlertDialog.SUCCESS_TYPE)
                                             .setTitleText("Well done!")
                                             .setContentText("Your version is updated")

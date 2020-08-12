@@ -186,7 +186,7 @@ public class HomeFragment extends Fragment implements AuxiliarRVClickListener {
 
         if(LoginFragment.login_photo!=null) {
             Uri uri = Uri.parse(LoginFragment.login_photo);
-            Glide.with(getActivity()).load(uri).into(photo);
+            Glide.with(getActivity()).load(uri).centerCrop().into(photo);
         }else {
             photo.setImageResource(R.drawable.hint);
         }

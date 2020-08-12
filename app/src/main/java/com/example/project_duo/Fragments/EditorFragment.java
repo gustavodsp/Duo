@@ -122,8 +122,8 @@ public class EditorFragment extends Fragment implements AuxiliarRVClickListener 
             final EditText input = new EditText(getActivity());
             input.setHint("Write the name");
             AlertDialog dialog = new AlertDialog.Builder(getActivity())
-                    .setTitle("Version's name")
-                    .setMessage("It's time to choose a name for the version you have acquired")
+                    .setTitle("Event's name")
+                    .setMessage("It's time to choose a name for the version you have acquired. Your guests will use this name to access your event! Don't worry, you can change it anytime you want.")
                     .setView(input)
                     .setPositiveButton("Create", null)
                     .setCancelable(false)

@@ -153,10 +153,10 @@ public class EditCeremonyFragment extends Fragment {
                     Glide.with(getActivity()).load(uri).centerCrop().fitCenter().into(localpic);
                 }
                 if(dataSnapshot.hasChild("coordLat")){
-                    coord1.setText(dataSnapshot.child("coordLat").getValue(String.class));
+                    coord1.setText(String.valueOf(dataSnapshot.child("coordLat").getValue(Double.class)));
                 }
                 if(dataSnapshot.hasChild("coordLong")){
-                    coord2.setText(dataSnapshot.child("coordLong").getValue(String.class));
+                    coord2.setText(String.valueOf(dataSnapshot.child("coordLong").getValue(Double.class)));
                 }
 
             }

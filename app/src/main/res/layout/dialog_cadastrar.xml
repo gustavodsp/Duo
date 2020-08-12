@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Nome ou apelido"
+                android:hint="Name or nickname"
                 android:inputType="textPersonName"
                 android:textColor="@android:color/black" />
         </LinearLayout>
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Senha"
+                android:hint="Password"
                 android:inputType="textPassword"
                 android:textColor="@android:color/black"/>
         </LinearLayout>
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:background="@drawable/round_corners_shadow"
-            android:text="Criar conta"
+            android:text="Create account"
             android:textAllCaps="false"
             android:textColor="@color/dark_gray"
             android:textSize="18sp" />
@@ -105,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:clickable="true"
-            android:text="Já possui uma conta? Faça o login"
+            android:text="Do you already have an account? Click here to sign in"
             android:textColor="@color/dark_gray" />
 
     </LinearLayout>

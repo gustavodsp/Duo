@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Titulo"
+                android:text="Title"
                 android:textColor="@android:color/white"
                 android:textSize="28sp" />
 
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:text="num itens"
+                android:text="num items"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -127,7 +127,7 @@
             android:background="@drawable/btn_white"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            android:text="Editar"
+            android:text="Edit"
             android:textAllCaps="false"
             android:textColor="#EC6F66"
             android:textSize="18sp" />
