@@ -14,5 +14,4 @@ Some features available for each event are:
 •	Area to write and see messages destined to the groom and bride
 •	Area to post and see pictures from everyone who have access to the event
 •	Acknowledgement page
-•	Area for gifts in form of donations**
-
+•	Area for gifts in form of donations*
