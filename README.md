@@ -4,6 +4,7 @@ Duo is my own project, a mobile aplication for android.
 It is a platform for weddings, where engaged couples can buy and edit their own personalized "event" and share it with their guests.
 
 Some features available for each event are:
+
 • Pre-wedding video presentation
 •	Date of the wedding and a real-time countdown
 •	Photo album presented in a slideshow format
