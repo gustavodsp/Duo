@@ -29,4 +29,15 @@ Some features available for each event are:
 <p float="left"> 
   <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Home%20screen.jpg width=200px>
   <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Logged%20in.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Error2.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Buy%20Event.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20Home.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20History.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20Carrousel.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20Ceremony.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20Feed.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20Messages.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20Donation.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Editor%20Home.jpg width=200px>
+  <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Editor%20Ceremony.jpg width=200px>
 </p>
