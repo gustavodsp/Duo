@@ -25,3 +25,5 @@ Some features available for each event are:
 •	Acknowledgement page
 
 •	Area for gifts in form of donations*
+
+![Home Screen](https://drive.google.com/file/d/12PbiI7eMWAWY-xmOwIGHnRXalbZ03JBP/view?usp=sharing)
