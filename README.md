@@ -26,4 +26,5 @@ Some features available for each event are:
 
 •	Area for gifts in form of donations*
 
-<img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Logged%20in.jpg alt="Home Screen" width=300px>
+<img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Home%screen.jpg width=300px>
+<img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Logged%20in.jpg width=300px>
