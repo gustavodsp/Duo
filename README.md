@@ -43,7 +43,7 @@ Some features available for each event are:
   <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20Messages.jpg width=180px>
   <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Event%20Donation.jpg width=180px>
 </p>
-<h2 Editor </h2>
+<h2> Editor </h2>
 <p float="left"> 
   <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Editor%20Home.jpg width=180px>
   <img src=https://github.com/gustavodsp/Duo/blob/master/Screenshots/Editor%20Ceremony.jpg width=180px>
